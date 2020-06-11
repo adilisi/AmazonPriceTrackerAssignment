@@ -3,9 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 import smtplib
 import time
-#SETTING OUR PRODUCT THAT WILL BE USED
+#SETTING OUR PRODUCT THAT WILL BE USED IN THIS CASE ITS THE AMAZON ECHO!
 URL = "https://www.amazon.com/Echo-Dot/dp/B07FZ8S74R/ref=zg_bs_electronics_home_2?_encoding=UTF8&psc=1&refRID=ZKZCJY3YZ1S5QC96CS6J"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+#MAY NEED TO CHANGE WANTED_PRICE IF YOU CHANGE YOUR PRODUCT LINK!
 Wanted_Price = 45
 #CREATED FUNCTION TO TRACK THE PRICE OF OUR PRODUCT AND PRINTING IF ITS TO EXPENSIVE OR IF ITS ON SALE.
 def Price_track():
@@ -38,7 +39,7 @@ def check_price():
 	    send_mail()
 
 
-#CREATING THE SEND MAIL FUNCTION.
+#CREATING THE SEND MAIL FUNCTION TO EMAIL US WHEN THE PRICE HAS BEEN CHANGED.
 def send_mail():
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.ehlo()
@@ -59,7 +60,7 @@ def send_mail():
 	#PRINTING OUT THE RESPONSE IN CONSOLE ONCE THE EMAIL GETS SENT.
 	print('The Email has been sent. Please check your email to get the link to the updated listing and product.')
 	server.quit()
-	#RUNNING CHECK_PRICE FUNCTION AND DOING IT EVERY HOUR. READ THE README FILE TO CHANGE THE TIME IT CHECKS THE PRODUCT.
+	#RUNNING CHECK_PRICE FUNCTION AND DOING IT EVERY 60 seconds. READ THE README FILE TO CHANGE THE TIME IT CHECKS THE PRODUCT.
 while(True):
     check_price()
-    time.sleep(60 * 60)
+    time.sleep(60 )
