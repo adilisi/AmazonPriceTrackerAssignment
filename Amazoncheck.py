@@ -11,9 +11,9 @@ def Price_track():
     price = check_price()
     if price > Wanted_Price:
         diff = price - Wanted_Price
-        print("It still {:.2f} too expensive for me.".format(diff))
+        print("The Product is still {:.2f} too expensive for me.".format(diff))
     else:
-        print("It's Cheaper :D")
+        print("The Product is now on sale. Go purchase it fast before its gone!")
 
 
 def check_price():
@@ -51,7 +51,7 @@ def send_mail():
 	'ENTER THE EMAIL YOU WANT TO SEND TO',
 	msg
 	)
-	print('The email is sent')
+	print('The Email has been sent. Please check your email to get the link to the updated listing and product.')
 	server.quit()
 while(True):
     check_price()
