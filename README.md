@@ -2,18 +2,18 @@
 AmazonPriceTracker Made with Python Final
 
 # INTRODUCTION
-The Amazon Price Tracker is used to track one product on Amazon US. It will scrape Amazon every hour and send an email to you if the product is on sale. This can be used to get your favorite items off of Amazon at a cheaper price.
+The Amazon Price Tracker is used to track one product on Amazon US. It will scrape Amazon every hour and send an email to you if the product is on sale. This can be used to get your favorite items off of Amazon at a cheaper price. For this application it will show you the Amazon Echo as the product unless you edit the code yourself.
 
 # PREREQUISTES
 Before running the application please make sure to import the following items to python.
 1.REQUESTS-  pipenv install requests or (MAC USERS) sudo  pipenv install requests 
 2.BEAUTIFULSOUP
-3.SMPTLIB - pip install smtplib
-4.TIME
+3.IMPORT SMPTLIB - pip install smtplib
+4.IMPORT TIME
 You also should have a basic understanding of Python and how to import those packages depending on your operating system.
 
 # INSTALLATION
-I have provided the entire code file below. All you need to do is download the code file and open it on your own machine.
+I have provided the entire code file below. All you need to do is download the code file and open it on your own machine. Please read below on how to use it.
 
 # HOW TO USE IT
 1. Before running the code you need to scroll down to line 45 and enter your email address and the APP PASSWORD where it tells you.
